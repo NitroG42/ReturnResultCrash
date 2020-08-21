@@ -26,7 +26,11 @@ fun main() {
             println("will be displayed: error caught")
         }
 
-        apiHolder.callErrorAndReturnResult().onFailure {
+        apiHolder.returnResultFailureDirectly().onFailure {
+            println("will be displayed: error caught")
+        }
+
+        apiHolder.callWSAndReturnFailure().onFailure {
             println("won't be displayed: crash")
         }
     }
